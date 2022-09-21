@@ -1,0 +1,119 @@
+@import 'variable'
+@import 'mixin'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $font
+
+body
+    display: flex
+    min-height: 100vh
+
+nav
+    position: absolute
+    width: 135px
+    height: 25px
+    margin: 15px
+
+nav .brand-name
+    font-family: $logo
+    font-weight: 700
+    font-size: 24px
+    line-height: 25px
+    letter-spacing: -0.08em
+    text-transform: uppercase
+    color: $grey
+
+.container
+    @include flex-center()
+
+.image
+    padding: 30px
+    margin-left: 50px
+
+.image img
+    width: 400px
+
+.content
+    padding: 40px
+    margin-left: 100px
+
+.title
+    font-size: 60px
+    font-weight: 700
+    line-height: 95px
+    letter-spacing: $letsp
+    color: $grey
+    width: 590px
+    padding-right: 50px
+    margin-bottom: 30px
+
+.sub-title
+    font-size: 24px
+    font-weight: 400
+    line-height: 36px
+    letter-spacing: $letsp
+    color: $grey1
+    width: 381px
+
+button
+    margin-top: 50px
+    padding: 20px 20px
+    border: none
+    background: $grey
+    color: $white
+    font-size: 14px
+    font-weight: 700
+    line-height: 21px
+    letter-spacing: $letsp
+    text-transform: uppercase 
+
+.attribution
+    position: absolute
+    top: 97%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 18px
+    color: $grey1
+    text-align: center
+
+.attribution a 
+    text-decoration: none
+    font-weight: 700
+    color: $attr
+
+
+@media (max-width: $screen)
+    .container
+        justify-content: flex-start
+        flex-direction: column
+    
+    .image
+        display: flex
+        padding: 120px 0 0 0
+        margin-left: 0
+    
+    .image img 
+        width: 286px
+        height: 238px
+    
+    .content
+        margin-left: 0
+    
+    .title
+        width: 350px
+        font-size: 40px
+        line-height: 71px
+    
+    .sub-title
+        width: 328px
+        font-size: 18px
+        line-height: 27px
+    
+    .attribution
+        display: inline-block
+        top: 137%
+        font-size: 14px
+        width: 352px
